@@ -20,6 +20,7 @@
 //
 // Short retina mixin for setting background-image and -size.
 
+// stylelint-disable indentation
 @mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
   background-image: url($file-1x);
 

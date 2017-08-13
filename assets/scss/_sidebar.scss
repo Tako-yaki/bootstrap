@@ -1,5 +1,3 @@
-// scss-lint:disable VendorPrefix
-
 //
 // Right side table of contents
 //
@@ -84,7 +82,7 @@
 
   // Override collapse behaviors
   @include media-breakpoint-up(md) {
-    display: block !important;
+    display: block !important; // stylelint-disable-line declaration-no-important
   }
 }
 

@@ -1,4 +1,4 @@
-// scss-lint:disable QualifyingElement, DuplicateProperty, VendorPrefix
+// stylelint-disable declaration-no-important, selector-no-qualifying-type, selector-list-comma-newline-after
 
 // Reboot
 //
@@ -228,6 +228,7 @@ pre,
 code,
 kbd,
 samp {
+  // stylelint-disable-next-line font-family-no-duplicate-names
   font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
   font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }

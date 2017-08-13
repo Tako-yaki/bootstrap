@@ -6,7 +6,7 @@
     background-color: $background;
   }
 
-  //scss-lint:disable QualifyingElement
+  //stylelint-disable selector-no-qualifying-type
   a.list-group-item-#{$state},
   button.list-group-item-#{$state} {
     color: $color;
@@ -22,5 +22,5 @@
       border-color: $color;
     }
   }
-  // scss-lint:enable QualifyingElement
+  // stylelint-enable selector-no-qualifying-type
 }

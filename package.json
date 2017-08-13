@@ -20,10 +20,10 @@
     "bash": "bash",
     "css": "npm-run-all css-lint css-compile css-prefix css-minify",
     "css-docs": "npm-run-all css-lint-docs css-compile-docs css-prefix-docs css-minify-docs",
-    "css-lint": "bundle exec scss-lint --config .scss-lint.yml scss/*.scss",
-    "css-lint-docs": "bundle exec scss-lint --config .scss-lint.yml --exclude assets/scss/docs.scss assets/scss/*.scss",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap.scss dist/css/bootstrap.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css",
     "css-compile-docs": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/docs.scss assets/css/docs.min.css",
+    "css-lint": "stylelint --config build/.stylelintrc --syntax scss scss/**/*.scss",
+    "css-lint-docs": "stylelint --config build/.stylelintrc --syntax scss assets/scss/*.scss",
     "css-prefix": "postcss --config build/postcss.config.js --replace dist/css/*.css",
     "css-prefix-docs": "postcss --config build/postcss.config.js --no-map --replace assets/css/docs.min.css",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css",
@@ -100,6 +100,10 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "shelljs": "^0.7.8",
     "shx": "^0.2.2",
+    "stylelint": "^8.1.1",
+    "stylelint-config-recommended-scss": "^2.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-scss": "^2.1.0",
     "uglify-js": "^3.0.24",
     "workbox-build": "^2.0.1"
   },
@@ -115,9 +119,7 @@
     "build",
     "js/.eslintrc.json",
     "js/**/*.js",
-    ".scss-lint.yml",
-    "scss/**/*.scss",
-    "LICENSE"
+    "scss/**/*.scss"
   ],
   "jspm": {
     "registry": "npm",

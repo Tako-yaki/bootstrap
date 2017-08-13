@@ -147,8 +147,7 @@
       }
 
       @include media-breakpoint-up($next) {
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-flow: row nowrap;
         justify-content: flex-start;
 
         .navbar-nav {
@@ -175,14 +174,12 @@
           flex-wrap: nowrap;
         }
 
-        // scss-lint:disable ImportantRule
         .navbar-collapse {
-          display: flex !important;
+          display: flex !important;  // stylelint-disable-line declaration-no-important
 
           // Changes flex-bases to auto because of an IE10 bug
           flex-basis: auto;
         }
-        // scss-lint:enable ImportantRule
 
         .navbar-toggler {
           display: none;

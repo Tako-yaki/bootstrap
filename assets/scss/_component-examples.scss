@@ -1,5 +1,3 @@
-// scss-lint:disable QualifyingElement
-
 //
 // Grid examples
 //
@@ -220,13 +218,13 @@
 
 // Forms
 .bd-example-control-sizing select,
-.bd-example-control-sizing input[type="text"] + input[type="text"] {
+.bd-example-control-sizing input[type="text"] + input[type="text"] { // stylelint-disable-line selector-no-qualifying-type
   margin-top: .5rem;
 }
 .bd-example-form .input-group {
   margin-bottom: .5rem;
 }
-.bd-example > textarea.form-control {
+.bd-example > textarea.form-control { // stylelint-disable-line selector-no-qualifying-type
   resize: vertical;
 }
 
@@ -288,7 +286,8 @@
 .modal {
   z-index: 1072;
 
-  .tooltip, .popover {
+  .tooltip,
+  .popover {
     z-index: 1073;
   }
 }
